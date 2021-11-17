@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/myProgramms/android/Udacity/androidLessons/LabHelper/app/src/main/res/drawable/border.xml" value="0.29128205128205126" />
+        <entry key="..\:/myProgramms/android/Udacity/androidLessons/LabHelper/app/src/main/res/drawable/border_fab.xml" value="0.1421875" />
+        <entry key="..\:/myProgramms/android/Udacity/androidLessons/LabHelper/app/src/main/res/drawable/border_search.xml" value="0.1421875" />
+        <entry key="..\:/myProgramms/android/Udacity/androidLessons/LabHelper/app/src/main/res/drawable/ic_launcher_background.xml" value="0.29128205128205126" />
+        <entry key="..\:/myProgramms/android/Udacity/androidLessons/LabHelper/app/src/main/res/drawable/outline_add_24.xml" value="0.1421875" />
+        <entry key="..\:/myProgramms/android/Udacity/androidLessons/LabHelper/app/src/main/res/drawable/outline_done_all_24.xml" value="0.103125" />
+        <entry key="..\:/myProgramms/android/Udacity/androidLessons/LabHelper/app/src/main/res/drawable/outline_more_vert_24.xml" value="0.103125" />
+        <entry key="..\:/myProgramms/android/Udacity/androidLessons/LabHelper/app/src/main/res/drawable/outline_search_24.xml" value="0.1328125" />
+        <entry key="..\:/myProgramms/android/Udacity/androidLessons/LabHelper/app/src/main/res/drawable/outline_settings_24.xml" value="0.20208333333333334" />
+        <entry key="..\:/myProgramms/android/Udacity/androidLessons/LabHelper/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/myProgramms/android/Udacity/androidLessons/LabHelper/app/src/main/res/layout/fragment_lab.xml" value="0.33" />
+        <entry key="..\:/myProgramms/android/Udacity/androidLessons/LabHelper/app/src/main/res/layout/fragment_main.xml" value="0.1" />
+        <entry key="..\:/myProgramms/android/Udacity/androidLessons/LabHelper/app/src/main/res/layout/fragment_table.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_lab.xml" value="0.17" />
+        <entry key="app/src/main/res/layout/fragment_main.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>
