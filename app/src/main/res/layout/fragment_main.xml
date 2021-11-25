@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/lab_header"
+            android:id="@+id/header_lab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
@@ -47,7 +47,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:id="@+id/last_added_text"
+            android:id="@+id/text_last_added"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -56,16 +56,16 @@
             android:textColor="@color/text_black"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lab_header" />
+            app:layout_constraintTop_toBottomOf="@+id/header_lab" />
 
         <HorizontalScrollView
-            android:id="@+id/horizontalScrollView"
+            android:id="@+id/list_recent_lab"
             android:layout_width="409dp"
             android:layout_height="100dp"
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/last_added_text">
+            app:layout_constraintTop_toBottomOf="@+id/text_last_added">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -74,7 +74,7 @@
         </HorizontalScrollView>
 
         <TextView
-            android:id="@+id/all_text"
+            android:id="@+id/text_all"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -83,7 +83,7 @@
             android:textColor="@color/text_black"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+            app:layout_constraintTop_toBottomOf="@+id/list_recent_lab" />
 
         <EditText
             android:id="@+id/search"
@@ -95,12 +95,14 @@
             android:background="@drawable/border_search"
             android:ems="10"
             android:inputType="textPersonName"
+            android:paddingLeft="16dp"
+            android:paddingRight="46dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/all_text" />
+            app:layout_constraintTop_toBottomOf="@+id/text_all" />
 
         <ImageView
-            android:id="@+id/search_button"
+            android:id="@+id/button_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -110,6 +112,7 @@
             app:layout_constraintTop_toTopOf="@+id/search" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_all_lab"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="16dp"
