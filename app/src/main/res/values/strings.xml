@@ -14,4 +14,8 @@
     <string name="add_table_button">add table</string>
     <string name="button_more">button more</string>
     <string name="image_status">image status</string>
+    <string name="new_table">Новая таблица</string>
+    <string name="camera">Камера</string>
+    <string name="gallery">Галерея</string>
+    <string name="button_camera">button camera</string>
 </resources>
