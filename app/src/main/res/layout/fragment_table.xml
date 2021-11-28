@@ -1,9 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".TableFragment">
+    tools:context=".FragmentTable">
 
-</FrameLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_green_yellow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_table_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/new_table"
+                android:textColor="@color/text_black"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/button_more"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="@string/button_more"
+                android:src="@drawable/outline_more_vert_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_table"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TableRow>
+                <TextView
+                    android:background="@drawable/border_table"
+                    android:padding="3dip"
+                    android:text="1.1" />
+
+                <TextView
+                    android:background="@drawable/border_table"
+                    android:padding="3dip"
+                    android:text="1.2" />
+                <TextView
+                    android:background="@drawable/border_table"
+                    android:padding="3dip"
+                    android:text="1.2" />
+                <TextView
+                    android:background="@drawable/border_table"
+                    android:padding="3dip"
+                    android:text="1.2" />
+                <TextView
+                    android:background="@drawable/border_table"
+                    android:padding="3dip"
+                    android:text="1.2" />
+                <TextView
+                    android:background="@drawable/border_table"
+                    android:padding="3dip"
+                    android:text="1.2" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:background="@drawable/border_table"
+                    android:padding="3dip"
+                    android:text="1.2" />
+
+                <TextView
+                    android:background="@drawable/border_table"
+                    android:padding="3dip"
+                    android:text="1.2" />
+                <TextView
+                    android:background="@drawable/border_table"
+                    android:padding="3dip"
+                    android:text="1.2" />
+                <TextView
+                    android:background="@drawable/border_table"
+                    android:padding="3dip"
+                    android:text="1.2" />
+                <TextView
+                    android:background="@drawable/border_table"
+                    android:padding="3dip"
+                    android:text="1.2" />
+                <TextView
+                    android:background="@drawable/border_table"
+                    android:padding="3dip"
+                    android:text="1.2" />
+            </TableRow>
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
