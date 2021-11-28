@@ -22,7 +22,6 @@ class FragmentLab : Fragment() {
         //Dialog
         val dialogPhoto: DialogPhoto = DialogPhoto()
 
-
         binding.buttonTable.setOnClickListener{
             findNavController().navigate(FragmentLabDirections.actionLabFragmentToTableFragment())
         }
