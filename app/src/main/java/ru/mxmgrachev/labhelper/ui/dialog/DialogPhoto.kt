@@ -1,4 +1,4 @@
-package ru.mxmgrachev.labhelper
+package ru.mxmgrachev.labhelper.ui.dialog
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
+import ru.mxmgrachev.labhelper.R
 import ru.mxmgrachev.labhelper.databinding.DialogPhotoBinding
 
 

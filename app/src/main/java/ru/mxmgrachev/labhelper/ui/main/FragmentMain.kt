@@ -1,4 +1,4 @@
-package ru.mxmgrachev.labhelper
+package ru.mxmgrachev.labhelper.ui.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
+import ru.mxmgrachev.labhelper.R
 import ru.mxmgrachev.labhelper.databinding.FragmentMainBinding
 
 class FragmentMain : Fragment() {

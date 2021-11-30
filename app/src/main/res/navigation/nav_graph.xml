@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="ru.mxmgrachev.labhelper.FragmentMain"
+        android:name="ru.mxmgrachev.labhelper.ui.main.FragmentMain"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/labFragment"
-        android:name="ru.mxmgrachev.labhelper.FragmentLab"
+        android:name="ru.mxmgrachev.labhelper.ui.lab.FragmentLab"
         android:label="fragment_lab"
         tools:layout="@layout/fragment_lab" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/tableFragment"
-        android:name="ru.mxmgrachev.labhelper.FragmentTable"
+        android:name="ru.mxmgrachev.labhelper.ui.table.FragmentTable"
         android:label="fragment_table"
         tools:layout="@layout/fragment_table" />
 </navigation>

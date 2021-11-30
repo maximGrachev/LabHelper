@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">Lab Helper</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="add_new_lab">add new lab</string>
+    <string name="add_new_lab">кнопка добавить новую работу</string>
     <string name="question">Вопросы на защиту:</string>
     <string name="lab_number">Номер работы:</string>
     <string name="subject">Предмет:</string>
     <string name="is_not_complete">Не выполнена</string>
+    <string name="is_done">Показания сняты</string>
+    <string name="is_all_done">Защищена</string>
     <string name="_3">3</string>
     <string name="phisics">физика</string>
     <string name="_1_6">1,6</string>
@@ -18,4 +20,11 @@
     <string name="camera">Камера</string>
     <string name="gallery">Галерея</string>
     <string name="button_camera">button camera</string>
+    <string name="your_lab">Ваши работы</string>
+    <string name="last_added">Последние добавленные</string>
+    <string name="all">Все</string>
+    <string name="button_settings">button settings</string>
+    <string name="button_add">button add</string>
+    <string name="button_search">button search</string>
+    <string name="button_save">button save</string>
 </resources>
