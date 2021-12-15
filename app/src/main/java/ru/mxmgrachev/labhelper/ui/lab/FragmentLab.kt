@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import ru.mxmgrachev.labhelper.R
+import ru.mxmgrachev.labhelper.data.database.LabDatabase
 import ru.mxmgrachev.labhelper.databinding.FragmentLabBinding
 import ru.mxmgrachev.labhelper.ui.dialog.DialogPhoto
 
@@ -23,7 +24,14 @@ class FragmentLab : Fragment() {
         val binding: FragmentLabBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_lab, container, false)
 
-        val viewModel = ViewModelProvider(this).get(LabViewModel::class.java)
+        val application = requireNotNull(this.activity).application
+        val dataSource = LabDatabase.getInstance(application).labDao
+        val args = FragmentLabArgs.fromBundle(requireArguments())
+        val labViewModelFactory = LabViewModelFactory(args.labId, dataSource)
+        val labViewModel = ViewModelProvider(this, labViewModelFactory)
+            .get(LabViewModel::class.java)
+        binding.labViewModel = labViewModel
+        binding.lifecycleOwner = this
 
         binding.imageStatus.setOnClickListener {
             val statusMap = mapOf(
@@ -32,9 +40,9 @@ class FragmentLab : Fragment() {
                 getText(R.string.is_all_done) to "all_done"
             )
 
-            val stateNow = statusMap[binding.textLabStatus.text]
+            val statusNow = statusMap[binding.textLabStatus.text]
 
-            when (stateNow) {
+            when (statusNow) {
                 "not_complete" -> {
                     binding.imageStatus.setImageResource(R.drawable.outline_done_24)
                     binding.textLabStatus.setText(R.string.is_done)
@@ -68,7 +76,7 @@ class FragmentLab : Fragment() {
             override fun onTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
                 showAddButton(binding)
             }
-        });
+        })
 
         binding.editTextLabNumber.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {
@@ -86,7 +94,7 @@ class FragmentLab : Fragment() {
             ) {
                 showAddButton(binding)
             }
-        });
+        })
 
         binding.editTextLabQuestion.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {
@@ -118,12 +126,21 @@ class FragmentLab : Fragment() {
             }
         });
 
+        val labNumber: Int? = if(binding.editTextLabNumber.text.isNotBlank() && binding.editTextLabNumber.text.isNotEmpty()){
+            binding.editTextLabNumber.text.toString().toInt()
+        }
+        else null
         binding.buttonSave.setOnClickListener {
-            if (binding.editTextSubject.text.isNotBlank()) {
-                //todo add lab to a db
-            }
-            else{
-                Toast.makeText(context,"Заполните поле предмет", Toast.LENGTH_SHORT).show()
+            if (binding.editTextSubject.text.isNotBlank() && binding.editTextSubject.text.isNotEmpty()) {
+                labViewModel.createNewLab(
+                    binding.editTextSubject.text.toString(),
+                    labNumber,
+                    binding.editTextLabQuestion.text?.toString(),
+                    binding.textLabStatus.text.toString(),
+                    binding.editTextLabMainText?.text.toString(),
+                )
+            } else {
+                Toast.makeText(context, "Заполните поле \"Предмет\"", Toast.LENGTH_SHORT).show()
             }
         }
 

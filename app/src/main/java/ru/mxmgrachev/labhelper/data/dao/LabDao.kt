@@ -8,11 +8,14 @@ import ru.mxmgrachev.labhelper.data.entity.Lab
 @Dao
 interface LabDao {
     @Insert
-    fun insert(lab: Lab)
+    suspend fun insert(lab: Lab)
 
     @Query("select * from lab")
-    fun getAllFullLab(): List<Lab>
+    suspend fun getAllLab(): List<Lab>
 
     @Query("select distinct name from lab")
-    fun getAllSubject(): String
+    suspend fun getAllSubject(): String
+
+    @Query("select * from lab order by id desc limit 5")
+    suspend fun getLastAddedLab(): List<Lab>
 }

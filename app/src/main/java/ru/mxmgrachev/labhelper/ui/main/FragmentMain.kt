@@ -26,8 +26,6 @@ class FragmentMain : Fragment() {
         val application = requireNotNull(this.activity).application
         val labDatabase = LabDatabase.getInstance(application).labDao
 
-
-
         // Inflate the layout for this fragment
         return binding.root
     }

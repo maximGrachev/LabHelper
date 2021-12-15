@@ -22,6 +22,10 @@
         <action
             android:id="@+id/action_labFragment_to_tableFragment"
             app:destination="@id/tableFragment" />
+        <argument
+            android:name="labId"
+            app:argType="integer"
+            android:defaultValue="-1" />
     </fragment>
     <fragment
         android:id="@+id/tableFragment"
