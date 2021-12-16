@@ -26,6 +26,9 @@
             android:name="labId"
             app:argType="integer"
             android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_labFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/tableFragment"

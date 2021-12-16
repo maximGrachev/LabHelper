@@ -6,10 +6,10 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "lab")
 data class Lab(
-    @PrimaryKey(autoGenerate = true) val id: Int,
-    @ColumnInfo(name="name") val name: String,
-    @ColumnInfo(name="number") val number: Int?,
-    @ColumnInfo(name="question") val question: String?,
-    @ColumnInfo(name="status") val status: String,
-    @ColumnInfo(name="lab_text") val labText: String?,
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    @ColumnInfo(name="name") val name: String = "",
+    @ColumnInfo(name="number") val number: Int?= null,
+    @ColumnInfo(name="question") val question: String? = null,
+    @ColumnInfo(name="status") val status: String = "Не выполнена",
+    @ColumnInfo(name="lab_text") val labText: String? = null,
 )

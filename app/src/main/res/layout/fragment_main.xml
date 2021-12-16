@@ -127,7 +127,7 @@
 <!--            app:layout_constraintStart_toStartOf="parent"-->
 <!--            app:layout_constraintTop_toBottomOf="@+id/search" />-->
 
-        <TextView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/list_all_lab"
             android:layout_width="0dp"
             android:layout_height="0dp"

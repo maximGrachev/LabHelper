@@ -1,18 +1,20 @@
 package ru.mxmgrachev.labhelper.ui.lab
 
+import android.graphics.Color
+import android.graphics.drawable.GradientDrawable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.room.ColumnInfo
-import androidx.room.PrimaryKey
 import kotlinx.coroutines.launch
 import ru.mxmgrachev.labhelper.data.dao.LabDao
 import ru.mxmgrachev.labhelper.data.entity.Lab
 
 class LabViewModel(
     labKey: Int,
-    private val dataSource: LabDao
+    dataSource: LabDao
 ) : ViewModel() {
     private val database = dataSource
+
+    //TODO add and store in db random gradient
 
     fun createNewLab(
         name: String,
@@ -20,20 +22,20 @@ class LabViewModel(
         question: String?,
         status: String,
         labText: String?,
-    ){
+    ) {
+        val newLab = Lab(
+            name = name,
+            number = number,
+            question = question,
+            status = status,
+            labText = labText
+        )
         viewModelScope.launch {
-            val newLab = Lab(
-                id=5,
-                name = name,
-                number = number,
-                question = question,
-                status = status,
-                labText = labText
-            )
             insert(newLab)
         }
     }
-    private suspend fun insert(lab: Lab){
+
+    private suspend fun insert(lab: Lab) {
         database.insert(lab)
     }
 }

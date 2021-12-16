@@ -139,6 +139,7 @@ class FragmentLab : Fragment() {
                     binding.textLabStatus.text.toString(),
                     binding.editTextLabMainText?.text.toString(),
                 )
+                findNavController().navigate(FragmentLabDirections.actionLabFragmentToMainFragment())
             } else {
                 Toast.makeText(context, "Заполните поле \"Предмет\"", Toast.LENGTH_SHORT).show()
             }
